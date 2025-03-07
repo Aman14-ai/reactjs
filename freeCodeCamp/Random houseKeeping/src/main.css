@@ -1,4 +1,4 @@
-body{
+body {
     background-color: black;
     color: whitesmoke;
     font-style: arial sans-serif;
@@ -10,22 +10,77 @@ body{
     margin: 10% 20%;
     padding: 3px;
     border-radius: 20px;
-    
+
 }
-.container{
+
+.container {
     background-color: rgb(34, 41, 33);
     border-radius: 20px;
     padding: 1rem;
     box-shadow: 2px 2px 5px 2px rgb(52, 52, 51);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.header{
+
+.container {
+    width: 80%;
+    /* or any percentage */
+    max-width: 1200px;
+    /* optional for limiting max size */
+    margin: 0 auto;
+    /* center the container */
+}
+
+.header,
+ul,
+footer {
+    width: 100%;
+    /* Make children take full width of parent */
+}
+
+.smaller {
+    font-size: 13px;
+    margin-top: 5px;
+    color: rgb(103, 100, 65);
+}
+
+.headerUL {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(143, 126, 126);
+}
+
+a:hover {
+    color: rgb(117, 113, 113);
+}
+
+a:active {
+    color: rgb(214, 246, 97);
+}
+
+.header {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 3rem;
     background-color: rgb(32, 35, 38);
     border-radius: 20px;
+    box-shadow: 2px 2px 5px 2px rgb(52, 52, 51);
+
 }
-li{
+
+.mainUL li {
     list-style: none;
     padding: 1rem;
     margin: 1rem;
@@ -34,7 +89,8 @@ li{
     background-color: rgb(148, 140, 140);
     color: black;
 }
-ul{
+
+.mainUL {
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -42,11 +98,25 @@ ul{
     padding: 1rem;
     margin: 1rem;
 }
-img{
+
+img {
     border-radius: 50%;
     display: inline-block;
+    margin-left: 25px;
 }
-.inline{
+
+.inline {
     display: inline-block;
 }
 
+footer {
+    background-color: rgb(32, 35, 38);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 2px 2px 5px 2px rgb(52, 52, 51);
+}
