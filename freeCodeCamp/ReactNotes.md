@@ -11,3 +11,6 @@
 
 #   What does it means for something to be 'composable'
 *   we have some small pieces that we can put together to make something larger or greater than the individual pieces themselves.
+
+##      DATA - DRIVEN REACT APPS
+*   
