@@ -107,6 +107,8 @@ img {
 
 .inline {
     display: inline-block;
+    color: #00d8ff;
+    font-size: large;
 }
 
 footer {
