@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fafaf8;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0.6rem;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    gap: 3%;
+    height: 3.3rem;
+}
+header > img{
+    width: 2.6rem;
+}
+header > h1{
+    font-size: 1rem;
+    font-weight: 400;
+}
+main{
+    padding: 40px 20px 10px 20px;
+}
+.add-ingredient-form{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    
+}
+.add-ingredient-form > input { 
+    padding: 9px 13px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    flex-grow: 1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    max-width: 400px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Focus State - When the input is clicked or selected */
+.add-ingredient-form > input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 2px 6px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Active State - While the input is being clicked */
+.add-ingredient-form > input:active {
+    border-color: #0056b3;
+    box-shadow: 0px 2px 8px rgba(0, 86, 179, 0.6);
+}
+.add-ingredient-form > button {
+    font-family: 'Inter', sans-serif;
+    padding: 9px 13px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    background-color: #141413;
+    color: #fafaf8;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Add hover effect for better interaction */
+.add-ingredient-form > button:hover {
+    background-color: #2f2e2d;
+}
+
+/* When the button is clicked */
+.add-ingredient-form > button:active {
+    background-color: #3e3d3b;
+    transform: scale(0.98);
+}
+
+/* When the button is focused (e.g., via keyboard navigation) */
+
+/* Add a "+" sign before the button text */
+.add-ingredient-form > button::before {
+    content: "+";
+    margin-right: 5px;
+}
+
