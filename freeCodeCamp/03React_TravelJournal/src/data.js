@@ -46,5 +46,53 @@ export default [
         googleLinks: 'https://en.wikipedia.org/wiki/New_York_City',
         dates: '01 Mar, 2022 - 15 Mar, 2022',
         text: 'New York City is the largest city in the United States, known for its iconic landmarks, diverse culture, and economic influence.'
+    },
+    {
+        id: 5,
+        img: {
+            src: 'https://img.freepik.com/free-photo/eiffel-tower-paris-france-with-beautiful-sunset_1150-11039.jpg',
+            alt: 'paris'
+        },
+        title: 'Paris',
+        country: 'France',
+        googleLinks: 'https://en.wikipedia.org/wiki/Paris',
+        dates: '10 Apr, 2022 - 25 Apr, 2022',
+        text: 'Paris, the capital of France, is renowned for its art, fashion, gastronomy, and culture. It is home to famous landmarks like the Eiffel Tower and the Louvre Museum.'
+    },
+    {
+        id: 6,
+        img: {
+            src: 'https://img.freepik.com/free-photo/sydney-opera-house-harbour-bridge-australia_1150-11008.jpg',
+            alt: 'sydney'
+        },
+        title: 'Sydney',
+        country: 'Australia',
+        googleLinks: 'https://en.wikipedia.org/wiki/Sydney',
+        dates: '05 Jun, 2022 - 20 Jun, 2022',
+        text: 'Sydney, Australia’s largest city, is famous for its stunning harbor, the Sydney Opera House, and beautiful beaches like Bondi Beach.'
+    },
+    {
+        id: 7,
+        img: {
+            src: 'https://img.freepik.com/free-photo/mount-fuji-japan-reflected-lake-kawaguchi-during-autumn_1150-11012.jpg',
+            alt: 'tokyo'
+        },
+        title: 'Tokyo',
+        country: 'Japan',
+        googleLinks: 'https://en.wikipedia.org/wiki/Tokyo',
+        dates: '15 Sep, 2022 - 30 Sep, 2022',
+        text: 'Tokyo, the capital of Japan, is a bustling metropolis known for its modern architecture, vibrant culture, and rich history, blending tradition with technology.'
+    },
+    {
+        id: 8,
+        img: {
+            src: 'https://img.freepik.com/free-photo/christ-redeemer-statue-rio-de-janeiro-brazil_1150-11014.jpg',
+            alt: 'rio de janeiro'
+        },
+        title: 'Rio de Janeiro',
+        country: 'Brazil',
+        googleLinks: 'https://en.wikipedia.org/wiki/Rio_de_Janeiro',
+        dates: '12 Nov, 2022 - 27 Nov, 2022',
+        text: 'Rio de Janeiro is a vibrant city in Brazil, famous for its stunning beaches, the Christ the Redeemer statue, and its world-renowned Carnival festival.'
     }
 ]
