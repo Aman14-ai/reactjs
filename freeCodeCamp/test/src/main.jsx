@@ -15,6 +15,7 @@ function Array() {
     </main>
   )
 }
+
 function Object() {
   const jsx = {firstname: "Aman"};
   return (
@@ -41,8 +42,8 @@ function Jsx(){
 }
 function App(){
   //console.log(jokesData);
-  const jokeElements = jokesData.map((joke) => {
-    return <Joke setup={joke.setup} punchline={joke.punchline} />
+  const jokeElements = jokesData.map((joke , index) => {
+    return <Joke key={index} setup={joke.setup} punchline={joke.punchline} />
   })
   return (
     <main>

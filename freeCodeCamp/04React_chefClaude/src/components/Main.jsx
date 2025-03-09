@@ -18,6 +18,7 @@ function Main() {
                     action={handleSubmit}
                     className="add-ingredient-form">
                     <input
+                    required
                         name="ingredient"
                         type="text"
                         placeholder="e.g. oregano"
