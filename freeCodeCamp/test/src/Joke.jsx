@@ -1,19 +1,27 @@
-import { useState } from "react";
+import React, { useState } from 'react';
+import './index.css'; // Import the CSS file
 
-export default function Joke(props) {
+const JokeComponent = (props) => {
+    const [isShown, setIsShown] = useState(false);
 
-    let [isShown , setIsShown ] = useState(false);
-     function toggleShown(){
-        setIsShown(prev => !prev);
-        /*isShown = isShown ? false : true ;
-        setIsShown(isShown);*/
-    }
+    const toggleShown = () => {
+        setIsShown(!isShown);
+    };
+
     return (
-        <>
-            <h1>setup: {props.setup}</h1>
-            {isShown === true && <p><strong>Punchline:</strong>{ props.punchline}</p>}
-            <button onClick={ toggleShown }>Show punchline</button>
-            <hr />
-        </>
-    )
-}
+        <div>
+            <h1 className="setup-heading">Setup: {props.setup}</h1>
+            {isShown && (
+                <p className="punchline-text">
+                    <strong>Punchline:</strong> {props.punchline}
+                </p>
+            )}
+            <button className="toggle-button" onClick={toggleShown}>
+                {isShown && 'Hide' || 'Show'}
+            </button>
+            <hr className="divider" />
+        </div>
+    );
+};
+
+export default JokeComponent;

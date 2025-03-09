@@ -1,15 +1,15 @@
-import { useState , useEffect } from 'react';
+import { useState, useEffect } from 'react';
 function Main() {
 
-    let [ ingredients , setIngredients ] = useState([]);
+    let [ingredients, setIngredients] = useState([]);
 
     function handleSubmit(FormData) {
-       const newIngredient = FormData.get("ingredient");
-        setIngredients(prev => [...prev , newIngredient]);
-        
+        const newIngredient = FormData.get("ingredient");
+        setIngredients(prev => [...prev, newIngredient]);
+
     }
 
-    const ingredientsListItems = ingredients.map((ingredient , index) => (<li className='li-ingredients' key={index}>{ingredient}</li>));; 
+    const ingredientsListItems = ingredients.map((ingredient, index) => (<li className='li-ingredients' key={index}>{ingredient}</li>));;
 
     return (
         <>
@@ -18,7 +18,7 @@ function Main() {
                     action={handleSubmit}
                     className="add-ingredient-form">
                     <input
-                    required
+                        required
                         name="ingredient"
                         type="text"
                         placeholder="e.g. oregano"
@@ -26,9 +26,19 @@ function Main() {
                     />
                     <button>Add ingredient</button>
                 </form>
-                <ul className='ul-ingredients'>
-                    {ingredientsListItems}
-                </ul>
+                {ingredients.length > 0 &&<section>
+                    <h2>Ingredients on hand:</h2>
+                    <ul className="ingredients-list" aria-live="polite">
+                        {ingredientsListItems}
+                    </ul>
+                    <div className="get-recipe-container">
+                        <div>
+                            <h3>Ready for a recipe?</h3>
+                            <p>Generate a recipe from your list of ingredients.</p>
+                        </div>
+                        <button className="get-recipe-btn">Get a recipe</button>
+                    </div>
+                </section>}
             </main>
 
         </>

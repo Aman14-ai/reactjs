@@ -1,0 +1,39 @@
+/* styles.css */
+
+/* Style for the <h1> element */
+.setup-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Style for the punchline paragraph */
+.punchline-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* Style for the button */
+.toggle-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the horizontal rule */
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 1.5rem 0;
+}

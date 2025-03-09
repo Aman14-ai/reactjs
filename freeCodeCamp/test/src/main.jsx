@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode , useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import jokesData from './JokesData.js';
 import Joke from './Joke.jsx';
@@ -17,7 +17,7 @@ function Array() {
 }
 
 function Object() {
-  const jsx = {firstname: "Aman"};
+  const jsx = { firstname: "Aman" };
   return (
     <main>
       <h1>{jsx.firstname}</h1>
@@ -25,11 +25,11 @@ function Object() {
   )
 }
 
-function Jsx(){
+function Jsx() {
   const ninjaTurtles = [
-    <h1>Leonardo</h1>, 
-    <h2>Donatello</h2>, 
-    <h3>Raphael</h3>, 
+    <h1>Leonardo</h1>,
+    <h2>Donatello</h2>,
+    <h3>Raphael</h3>,
     <h4>Michelangelo</h4>,
     <h5>Choudhary Ji</h5>,
     <h6>Aman Choudhary Ji</h6>
@@ -40,9 +40,9 @@ function Jsx(){
     </main>
   )
 }
-function App(){
+function App() {
   //console.log(jokesData);
-  const jokeElements = jokesData.map((joke , index) => {
+  const jokeElements = jokesData.map((joke, index) => {
     return <Joke key={index} setup={joke.setup} punchline={joke.punchline} />
   })
   return (
@@ -51,11 +51,20 @@ function App(){
     </main>
   )
 }
+
+function Practice() {
+  const [value, setValue] = useState(['a']);
+  console.log(value)
+  return (value.length == 0 && <p>You have 0 unread message</p> || value.length === 1 && <h1>You have 1 unread meassage.</h1> || <h1>You have {value.length} unread messages.</h1>);
+  
+}
+
 createRoot(document.getElementById('root')).render(
   <>
     {/* <Array />
     <Object/>
     <Jsx/> */}
-    <App/>
+    <App />
+    <Practice />
   </>
 )
