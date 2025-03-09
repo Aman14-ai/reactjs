@@ -3,13 +3,10 @@ function Main() {
 
     let [ ingredients , setIngredients ] = useState([]);
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        const form = event.target;
-        const input = form.querySelector('input');
-        const value = input.value;
-        setIngredients(prev => [...prev , value]);
-        input.value = '';
+    function handleSubmit(FormData) {
+       const newIngredient = FormData.get("ingredient");
+        setIngredients(prev => [...prev , newIngredient]);
+        
     }
 
     const ingredientsListItems = ingredients.map((ingredient , index) => (<li className='li-ingredients' key={index}>{ingredient}</li>));; 
@@ -18,7 +15,7 @@ function Main() {
         <>
             <main>
                 <form
-                    onSubmit={handleSubmit}
+                    action={handleSubmit}
                     className="add-ingredient-form">
                     <input
                         name="ingredient"
