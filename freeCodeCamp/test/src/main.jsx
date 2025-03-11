@@ -44,9 +44,22 @@ function App() {
   //console.log(jokesData);
   const jokeElements = jokesData.map((joke, index) => {
     return <Joke key={index} setup={joke.setup} punchline={joke.punchline} />
-  })
+  });
+
+  const [darkMode , setDarkMode] = useState(false);
+    function Mode(){
+        function handleClick(){
+          setDarkMode(prev => !prev);
+        }
+        return (
+          <div className="mode">
+            <button className='mode-controller' onClick={handleClick}>{darkMode ? "Light Mode" : "Dark Mode"}</button>
+          </div>
+        )
+      }
   return (
-    <main>
+    <main style={{ backgroundColor:darkMode ?"black": "white", color: darkMode?"white": "black"}}>
+      <Mode />
       {jokeElements}
     </main>
   )
@@ -65,6 +78,6 @@ createRoot(document.getElementById('root')).render(
     <Object/>
     <Jsx/> */}
     <App />
-    <Practice />
+    
   </>
 )

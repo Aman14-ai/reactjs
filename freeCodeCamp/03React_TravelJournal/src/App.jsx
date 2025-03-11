@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import './components/index.css';
-import Entry from "./components/entry";
+import Entry from "./components/Entry.jsx";
 import data from './data.js';
 import { useState, useEffect } from "react";
 

@@ -1,0 +1,88 @@
+.pads-button{
+  width: 200px;
+  height: 200px;
+  margin: 9px;
+  border-radius: 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.mode{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+main{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto; 
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e2e;  /* Dark background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff7eb3, #ff758c); /* Gradient effect */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff5c7a, #ff3d67); /* Slightly darker on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #555555 #1e1e2e;
+}
+.mode-controller{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #333333; /* Dark background for mode conversion */
+  color: #ffffff; /* White text for contrast */
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.8s;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  margin: 15px;
+}
+
+.mode-controller:hover {
+  background-color: wheat;
+  color: black;
+  border: none;
+}
+.mode-controller:active {
+  background-color: #3e8e41;
+  color: white;
+  border: none;
+}
+.pads-button{
+  opacity: 0.2;
+}
+button.on{
+  opacity: 1;
+}
