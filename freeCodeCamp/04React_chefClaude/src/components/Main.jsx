@@ -21,11 +21,17 @@ function Main() {
             setIsLoading(true); // Show loading state
             const timer = setTimeout(() => {
                 setIsLoading(false); // Hide loading state after 2 seconds
-            }, 350);
+            }, 850);
 
             return () => clearTimeout(timer); // Cleanup timer
         }
     }, [ingredients]);
+
+    const [recipeShown, setRecipeShown] = useState(false);
+    function recipeStatus() {
+        setRecipeShown(prev => !prev);
+    }
+    
 
     return (
         <>
@@ -53,6 +59,7 @@ function Main() {
                             // Render the actual content
                             <section>
                                 <h2>Ingredients on hand:</h2>
+                                {ingredients.length < 3 && <p className='atleast-three-ingredients-paragraph'>Add atleast three ingredients.</p>}
                                 <ul className="ingredients-list" aria-live="polite">
                                     {ingredientsListItems}
                                 </ul>
@@ -61,8 +68,9 @@ function Main() {
                                         <h3>Ready for a recipe?</h3>
                                         <p>Generate a recipe from your list of ingredients.</p>
                                     </div>
-                                    <button className="get-recipe-btn">Get a recipe</button>
+                                    <button onClick={recipeStatus} className="get-recipe-btn">{recipeShown === false ? "Get a Recipe" : "Hide"} </button>
                                 </div>}
+                                
                             </section>
                         )}
                     </>

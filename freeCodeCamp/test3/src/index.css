@@ -1,0 +1,40 @@
+.counter{
+  font-size: 2em;
+  color: rgb(170, 255, 0);
+  text-align: center;
+  margin: 20px;
+}
+.increment{
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 1rem;
+}
+.decrement{
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.increment:hover {
+  background-color: darkgreen;
+}
+
+.increment:active {
+  background-color: lightgreen;
+}
+
+.decrement:hover {
+  background-color: darkred;
+}
+
+.decrement:active {
+  background-color: lightcoral;
+}
