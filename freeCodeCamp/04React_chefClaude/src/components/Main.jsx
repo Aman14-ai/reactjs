@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import IngredientsList from '../claude component/IngredientsList';
+import ClaudeRecipe from '../claude component/ClaudeRecipe';
+import { getRecipeFromMistral } from '../ai';
 
 function Main() {
     const [ingredients, setIngredients] = useState([]);
@@ -8,12 +11,6 @@ function Main() {
         const newIngredient = FormData.get("ingredient");
         setIngredients((prev) => [...prev, newIngredient]);
     }
-
-    const ingredientsListItems = ingredients.map((ingredient, index) => (
-        <li className="li-ingredients" key={index}>
-            {ingredient}
-        </li>
-    ));
 
     // Simulate loading effect when ingredients are added
     useEffect(() => {
@@ -28,10 +25,14 @@ function Main() {
     }, [ingredients]);
 
     const [recipeShown, setRecipeShown] = useState(false);
-    function recipeStatus() {
+    const [recipe , setRecipe] = useState("");
+
+    async function getRecipe(){
         setRecipeShown(prev => !prev);
+        const responseGenerated = await getRecipeFromMistral(ingredients);
+        setRecipe(responseGenerated);
     }
-    
+
 
     return (
         <>
@@ -57,24 +58,13 @@ function Main() {
                             </div>
                         ) : (
                             // Render the actual content
-                            <section>
-                                <h2>Ingredients on hand:</h2>
-                                {ingredients.length < 3 && <p className='atleast-three-ingredients-paragraph'>Add atleast three ingredients.</p>}
-                                <ul className="ingredients-list" aria-live="polite">
-                                    {ingredientsListItems}
-                                </ul>
-                                {ingredients.length >= 3 && <div className="get-recipe-container">
-                                    <div>
-                                        <h3>Ready for a recipe?</h3>
-                                        <p>Generate a recipe from your list of ingredients.</p>
-                                    </div>
-                                    <button onClick={recipeStatus} className="get-recipe-btn">{recipeShown === false ? "Get a Recipe" : "Hide"} </button>
-                                </div>}
-                                
-                            </section>
+                           <IngredientsList ingredients={ingredients} getRecipe={getRecipe} recipeShown={recipeShown}  />
+
                         )}
                     </>
                 )}
+                {recipeShown && <ClaudeRecipe recipe={recipe}/>}
+                
             </main>
         </>
     );
