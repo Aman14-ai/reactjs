@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin: 0px 30px;
+    border-radius: 5px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: 65px;
+    padding: 0px 20px;
+    background: linear-gradient(to right, #c084f5, #9119c6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header>h1 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(254, 253, 253, 0.5);
+}
+
+header>img {
+    width: 55px;
+    height: 50px;
+}
+
+main {
+    margin: 20px 30px;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.label>label>input {
+    width: 30vw;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.label>label>input:focus {
+    outline: none;
+    border-color: #9119c6;
+    box-shadow: 0 0 5px rgba(145, 25, 198, 0.5);
+}
+
+.label>label {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    color: #333;
+}
+
+.form-button>button {
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    width: 50vw;
+    padding: 10px 20px;
+    background: linear-gradient(to left, #aa09ef, #c084f5);
+    color: rgba(255, 255, 255, 0.8);
+    /* Adjusted opacity for text */
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 19px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 750px) {
+    .form-button>button {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 460px) {
+    .form-button>button {
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 370px) {
+    .form-button>button {
+        font-size: 0.5rem;
+        font-weight: 600;
+        height: 40px;
+    }
+}
+
+.form-button>button:hover {
+    background-color: #c084f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+.form-button>button:active {
+    background-color: #7a0fa3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.meme {
+    display: block;
+    margin: 30px auto;
+    position: relative;
+    width: 90vw; /* Adjust width dynamically */
+    max-width: 600px; /* Prevent it from getting too large */
+    height: auto;
+}
+
+.meme img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.meme .top, 
+.meme .bottom {
+    position: absolute;
+    width: 90%; /* Ensures text does not overflow */
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive font size */
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+}
+
+.meme .top {
+    top: 5%;
+}
+
+.meme .bottom {
+    bottom: 5%;
+}
+
+/* Make text wrap properly on smaller screens */
+@media (max-width: 480px) {
+    .meme .top, 
+    .meme .bottom {
+        font-size: clamp(1rem, 3.5vw, 2rem);
+        padding: 3px;
+    }
+}

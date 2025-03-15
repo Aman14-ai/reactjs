@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import "./Recipe.css"; // Import CSS for styling
 
-export default function ClaudeRecipe({ recipe }) {
+export default function ClaudeRecipe({ recipe , recipeShown }) {
     const recipeRef = useRef(null);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -19,7 +19,7 @@ export default function ClaudeRecipe({ recipe }) {
                 // Scroll AGAIN after loading completes to ensure visibility
                 setTimeout(() => {
                     recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }, 550); // Small delay for smooth effect
+                },  50); // Small delay for smooth effect
     
             }, 2000); // 2 seconds loading effect
     

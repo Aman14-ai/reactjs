@@ -372,10 +372,12 @@ h2 {
   
   .claudeRecipe-section ul {
     padding-left: 20px;
+    font-size: 19px;
   }
   
   .claudeRecipe-section li {
     margin-bottom: 5px;
+    font-size: 19px;
   }
   
   .claudeRecipe-section code {
