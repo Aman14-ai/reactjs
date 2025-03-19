@@ -1,0 +1,187 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header{
+  background-color: mintcream;
+  padding: 0px 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  margin-bottom: 30px;
+}
+header img{
+  width: 90px;
+}
+header ul{
+  display: flex;
+  gap: 1.5rem;
+  list-style-type: none;
+  background-color: whitesmoke;
+  padding: 13px 10px;
+  border-radius: 30px;
+}
+header button{
+  background-color: #000;
+  color: #fff;
+  padding: 12px 17px;
+  border: 0;
+  outline: 0;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+header ul li{
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+a.active {
+  color: #fff;
+  background: linear-gradient(60deg, #007BFF, #0056b3);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+a.active:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Pulse Animation for Active State */
+a.active:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+a.active:hover:after {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 1;
+}
+
+/* Underline Animation */
+a.active:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+a.active:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Add a subtle bounce effect on click */
+a.active:active {
+  transform: scale(0.95);
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+.contact-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center; /* Center buttons horizontally */
+  margin-top: 20px; /* Add some space above the buttons */
+}
+
+.contact-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF; /* Primary blue color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.contact-buttons button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Click Effect */
+.contact-buttons button:active {
+  transform: translateY(0); /* Reset lift on click */
+  background-color: #004080; /* Even darker shade on click */
+}
+
+/* Optional: Add a gradient background for a modern look */
+.contact-buttons button {
+  background: linear-gradient(45deg, #007BFF, #0056b3);
+}
+
+/* Optional: Add an animated underline on hover */
+.contact-buttons button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.contact-buttons button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Optional: Add a ripple effect on click */
+.contact-buttons button:active::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.contact-buttons button:active::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
