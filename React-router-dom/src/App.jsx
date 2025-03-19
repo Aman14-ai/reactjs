@@ -10,6 +10,9 @@ import ContactLayout from './Layout/ContactLayout';
 import ContactInfo from './components/ContactInfo';
 import ContactForm from './components/ContactForm';
 import NotFound from './components/NotFound';
+import Jobs, { JobsLoader } from './pages/Jobs';
+import JobsLayout from './Layout/JobsLayout';
+import JobsDetail, { jobDetailsLoader } from './components/JobsDetail';
 
 function App() {
   const Router = createBrowserRouter(
@@ -24,6 +27,12 @@ function App() {
         </Route>
 
         <Route path='product' element={<Product />} />
+
+        <Route path='jobs' element={<JobsLayout />}>
+          <Route  index element={<Jobs/>} loader={JobsLoader}/>
+          <Route path=':id' element={<JobsDetail />} loader={jobDetailsLoader}/>
+        </Route>
+
         <Route path= '*' element  ={< NotFound/>} />
       </Route>
     )

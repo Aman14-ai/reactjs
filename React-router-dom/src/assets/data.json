@@ -1,0 +1,35 @@
+{
+    "jobs":[
+        {
+            "id": 1,
+            "title": "Product Management",
+            "salary": "200k"
+        },
+        {
+            "id": 2,
+            "title": "Software Engineer",
+            "salary": "180k"
+        },
+        {
+            "id": 3,
+            "title": "Data Scientist",
+            "salary": "190k"
+        },
+        {
+            "id": 4,
+            "title": "UI/UX Designer",
+            "salary": "150k"
+        },
+        {
+            "id": 5,
+            "title": "DevOps Engineer",
+            "salary": "175k"
+        },
+        {
+                "id": 6,
+                "title": "Machine learning Engineer",
+                "salary": "1075k"
+        }
+    ]
+    
+}

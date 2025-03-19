@@ -22,7 +22,7 @@ header ul{
   gap: 1.5rem;
   list-style-type: none;
   background-color: whitesmoke;
-  padding: 13px 10px;
+  padding: 5px 10px;
   border-radius: 30px;
 }
 header button{
@@ -104,7 +104,7 @@ a.active:active {
   display: flex;
   flex-direction: column;
   margin: auto;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   width: 100%;
   height: 80vh;
@@ -184,4 +184,206 @@ a.active:active {
 .contact-buttons button:active::before {
   transform: translate(-50%, -50%) scale(1);
   opacity: 0;
+}
+
+.jobs-data-ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the list */
+  font-family: Arial, sans-serif; /* Use a clean font */
+}
+
+.jobs-data-li {
+  padding: 15px 20px;
+  margin: 10px 0;
+  background-color: #f9f9f9; /* Light background for each item */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between; /* Space out job title and salary */
+  align-items: center;
+}
+
+/* Hover Effect */
+.jobs-data-li:hover {
+  background-color: #f1f1f1; /* Slightly darker background on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Optional: Add a gradient border on hover */
+.jobs-data-li:hover {
+  border-image: linear-gradient(45deg, #007BFF, #00C6FF);
+  border-image-slice: 1;
+}
+
+/* Optional: Add a subtle animation for the list items */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.jobs-data-li {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0; /* Start invisible for fade-in effect */
+}
+
+/* Style the job title and salary */
+.jobs-data-li span {
+  font-weight: bold;
+  color: #333; /* Dark text for job title */
+}
+
+.jobs-data-li .salary {
+  color: #007BFF; /* Blue color for salary */
+  font-size: 14px;
+}
+
+/* Optional: Add a badge for the job ID */
+.jobs-data-li::before {
+  content: attr(data-id); /* Use the job ID as content */
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.job-detail {
+  background-color: #fff; /* White background */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 20px;
+  max-width: 400px; /* Limit card width */
+  margin: 20px auto; /* Center the card */
+  font-family: Arial, sans-serif; /* Clean font */
+  text-align: left; /* Align text to the left */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.job-detail:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Style the heading */
+.job-detail h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Dark text for heading */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007BFF; /* Blue underline for heading */
+  padding-bottom: 10px;
+}
+
+/* Style the paragraphs */
+.job-detail p {
+  font-size: 16px;
+  color: #555; /* Slightly lighter text for details */
+  margin: 10px 0;
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Highlight specific details */
+.job-detail p strong {
+  color: #007BFF; /* Blue color for emphasis */
+  font-weight: bold;
+}
+
+/* Optional: Add a gradient background for the card */
+.job-detail {
+  background: linear-gradient(135deg, #f9f9f9, #fff);
+}
+
+/* Optional: Add a subtle animation for the card */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.job-detail {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0; /* Start invisible for fade-in effect */
+}
+.job-layout {
+  background-color: #f9f9f9; /* Light background for the layout */
+  padding: 30px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-bottom: 20px; /* Space below the layout */
+  text-align: center; /* Center-align text */
+  font-family: Arial, sans-serif; /* Clean font */
+  width: 70vw;
+  text-align: center;
+}
+
+/* Style the heading */
+.job-layout h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #007BFF; /* Blue color for the heading */
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  letter-spacing: 1px; /* Slight spacing between letters */
+}
+
+/* Optional: Add a gradient underline for the heading */
+.job-layout h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #007BFF, #00C6FF); /* Gradient underline */
+  margin: 10px auto 0; /* Center the underline */
+  border-radius: 2px;
+}
+
+/* Style the paragraph */
+.job-layout p {
+  font-size: 16px;
+  color: #555; /* Slightly lighter text for the paragraph */
+  margin: 0;
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Optional: Add a subtle animation for the heading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.job-layout h2 {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0; /* Start invisible for fade-in effect */
 }
